@@ -1,0 +1,258 @@
+//------------------------------------
+//-- Colors .
+//------------------------------------
+
+
+
+
+
+//-- basics
+// WebKit-style focus
+tab-focus()
+	outline thin dotted
+	outline 5px auto -webkit-focus-ring-color
+	outline-offset -2px
+
+// Button variants
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+button-variant($color, $background, $border)
+	color $color
+	background-color $background
+	border-color $border
+
+	&:focus,
+	&.focus
+		color $color
+		background-color darken($background, 10%)
+		border-color darken($border, 10%)
+	&:hover
+		color $color
+		background-color darken($background, 25%)
+		border-color darken($border, 25%)
+		
+	&:active,
+	&.active,
+	.open > .dropdown-toggle&
+		color $color
+		background-color darken($background, 10%)
+		border-color darken($border, 10%)
+
+		&:hover,
+		&:focus,
+		&.focus
+			color darken($color, 25%)
+			background-color darken($background, 25%)
+			border-color darken($border, 25%)
+
+	&.border
+		background-color $background
+		&:hover
+			color lighten($color,80%)
+			background-color $color
+			border-color $border
+			
+
+	&:active,
+	&.active,
+	.open > .dropdown-toggle&
+		background-image none
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] &
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active
+			background-color $background
+			border-color $border
+
+	.badge
+		color $background
+		background-color $color
+
+// Button sizes
+button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+	padding $padding-vertical $padding-horizontal
+	font-size $font-size
+	line-height $line-height
+	border-radius $border-radius
+
+// Base styles
+// --------------------------------------------------
+.btn
+	display inline-block
+	margin-bottom 0 // For input.btn
+	font-weight normal
+	text-align center
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	background-image none
+	border 0px solid transparent
+	white-space nowrap
+	user-select none
+	text-decoration none
+	border-radius $border-radius__button
+	background $color__button
+	transition all .25s ease-in 
+
+	// &,
+	// &:active,
+	// &.active
+	// 	&:focus,
+	// 	&.focus
+	// 		tab-focus()
+
+	// &:hover,
+	// &:focus,
+	// &.focus
+	// 	color white
+	// 	text-decoration none
+
+	// &:active,
+	// &.active
+	// 	outline 0
+	// 	background-image none
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] &
+		cursor $cursor-disabled
+		opacity(.65)
+		box-shadow none
+
+	a&
+		&.disabled,
+		fieldset[disabled] &
+			pointer-events none // Future-proof disabling of clicks on `<a>` elements
+
+
+// Alternate buttons
+// --------------------------------------------------
+// $color, $background, $border
+.btn
+	&.default
+		button-variant(darken($color__default,50%), $color__default, $color__default)
+	&.primary
+		button-variant(darken($color__primary,50%), $color__primary, $color__primary)
+	&.success
+		button-variant(darken($color__success,50%), $color__success, $color__success)
+	&.info
+		button-variant(darken($color__info,50%), $color__info, $color__info)
+	&.warning
+		button-variant(darken($color__warning,50%), $color__warning, $color__warning)
+	&.danger
+		button-variant(darken($color__danger,50%), $color__danger, $color__danger)
+	&.gray
+		button-variant(darken($color__gray-lighter,50%), $color__gray-lighter, $color__gray-lightest)
+	&.dark
+		button-variant(lighten($color__gray-dark,50%), $color__gray-dark, $color__gray-dark)
+	&.light
+		button-variant(darken($color__light,50%), $color__light, $color__light)
+
+	// -- border btn variation
+	&.border
+		border-width 2px
+		&.default
+			button-variant($color__default, transparent, $color__default)	
+			&:hover
+				color $color__gray-medium !important
+		&.primary
+			button-variant($color__primary, transparent, $color__primary)
+		&.success
+			button-variant($color__success, transparent, $color__success)
+		&.info
+			button-variant($color__info, transparent, $color__info)
+		&.warning
+			button-variant($color__warning, transparent, $color__warning)
+		&.danger
+			button-variant($color__danger, transparent, $color__danger)
+		&.gray
+			button-variant($color__gray-lightest, transparent, $color__gray-lightest)
+			&:hover
+				color $color__gray-medium !important
+
+		&.dark
+			button-variant($color__gray-dark, transparent, $color__gray-dark)
+		
+		&.light
+			button-variant($color__light, transparent, $color__light)
+			&:hover
+				color $color__gray-medium !important
+				
+		&.white
+			button-variant($color__white, transparent, $color__white)
+			&:hover
+				color $color__gray-medium !important
+
+	// -- Button Sizes
+	&.big
+		min-width 160px 
+		padding (1.5/$padding__medium)
+		font-size 15px
+	&.medium
+		min-width 120px 
+		padding (1/$padding__medium)
+		font-size 14px
+	&.small
+		// min-width 120px 
+		padding (.75/$padding__medium) ($padding__medium)
+		font-size 13px
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link
+	color $color__link
+	font-weight normal
+	border-radius 0
+
+	&,
+	&:active,
+	&.active,
+	&[disabled],
+	fieldset[disabled] &
+		background-color transparent
+		box-shadow none
+
+	&,
+	&:hover,
+	&:focus,
+	&:active
+		border-color transparent
+
+	&:hover,
+	&:focus
+		color $color__link--over
+		background-color transparent
+
+	&[disabled],
+	fieldset[disabled] &
+		&:hover,
+		&:focus
+			color $color__link--disable
+			text-decoration none
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block
+	display block
+	width 100%
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block
+	margin-top 5px
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+	&.btn-block
+		width 100%

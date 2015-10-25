@@ -1,0 +1,117 @@
+//------------------------------------
+//-- Variables
+//------------------------------------
+
+
+
+
+
+// Colors
+//------------------------------------
+$color__black                        ?= hsla(black,1)
+$color__white                        ?= hsla(white,1)
+
+$color__dark                         ?= hsla(#193740,1)
+$color__light                        ?= darken(hsla(#FDFBF5,1),2.5%)
+
+$color__gray-dark                    ?= lighten($color__black, 20%)
+$color__gray-medium                  ?= lighten($color__black, 50%)
+$color__gray-light                   ?= lighten($color__black, 70%)
+$color__gray-lighter                 ?= lighten($color__black, 80%)
+$color__gray-lightest                ?= lighten($color__black, 98%)
+
+$color__primary                      ?= hsla(#78f3ff,1) // #0275d8
+$color__default                      ?= darken(hsla(#FDFBF5,1),2.5%)
+$color__success                      ?= hsla(#6EE9AB,1) // #10cfbd //#57cc78
+$color__info                         ?= hsla(#37CDFF,1) // #5bc0de
+$color__warning                      ?= hsla(#fff558,1) // #FFF245 // #f0ad4e
+$color__danger                       ?= hsla(#fb847f,1) // #FF6461 // #f55753 // #ff4b46
+
+$color__link                      ?= hsla(#0275d8)
+$color__link--over                ?= lighten($color__link,30%)
+$color__link--over                ?= hsla($color__link,.6)
+
+
+//-- buttons
+$color__button                       ?= $color__gray-lightest
+
+$color__warning-hover                ?= hsla(#FFAB3C,1)
+
+
+//-- Grid size
+//------------------------------------
+$ratio                                ?= (31/19) //1,6315789474
+$font-size__body                      ?= $ratio*10px
+
+$min-unit                             ?= 1em
+
+
+$max-width__small                     ?= 30*$min-unit // 480
+$max-width__medium                    ?= 45*$min-unit // 720
+$max-width__big                       ?= 60*$min-unit // 960
+$max-width__large                     ?= 46*$min-unit // 1200
+
+//padding
+$padding__small                       ?= 0.5*$min-unit
+$padding__medium                      ?= 2*$min-unit
+$padding__big                         ?= 6*$min-unit
+$padding__large                       ?= 8*$min-unit
+$padding__huge                        ?= 12*$min-unit
+
+//margin
+$margin__small                       ?= 1*$min-unit
+$margin__medium                      ?= 4*$min-unit
+$margin__big                         ?= 6*$min-unit
+$margin__large                       ?= 8*$min-unit
+$margin__huge                        ?= 10*$min-unit
+
+
+//-- Break Points
+//------------------------------------
+$breakpoint__desktop                ?= 62em
+$breakpoint__tablet                 ?= 48em
+$breakpoint__mobile                 ?= 34em
+
+
+//-- Typography
+//------------------------------------
+$font-family__sans                  ?= 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-family__serif                 ?= Georgia, "Times New Roman", Times, serif
+$font-family__monospace             ?= Menlo, Monaco, Consolas, "Courier New", monospace
+$font-family__base                  ?= $font-family__sans
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height__base                  ?= $ratio
+$line-height__computed              ?= floor($min-unit * $line-height__base)
+$line-height                        ?= $line-height__base
+
+//-- Heading
+//------------------------------------
+$font-size__h1                      ?= 2.5*$min-unit
+$font-size__h2                      ?= 2*$min-unit
+$font-size__h3                      ?= 1.75*$min-unit
+$font-size__h4                      ?= 1.5*$min-unit
+$font-size__h5                      ?= 1.25*$min-unit
+$font-size__h6                      ?= 1*$min-unit
+
+$headings__font-family              ?= 'Montserrat', $font-family__sans
+$headings__font-weight              ?= 300
+$headings__line-height              ?= 1.2em
+$headings__color                    ?= inherit
+
+
+//-- Border Radius
+//------------------------------------
+$border-radius__button              ?= $border-radius--big  
+$border-radius--small               ?= $min-unit/4
+$border-radius--medium              ?= $min-unit/2
+$border-radius--big                 ?= $min-unit*10
+
+
+
+
+
+
+
+
+

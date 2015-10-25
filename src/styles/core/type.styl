@@ -1,0 +1,299 @@
+//------------------------------------
+//-- Type style
+//------------------------------------
+
+
+
+
+
+//-- Text reset
+body
+	font-family $font-family__base
+	// We deliberately do NOT reset font-size.
+	font-style normal
+	font-weight normal
+	letter-spacing normal
+	line-break auto
+	line-height $line-height
+	text-align left
+	text-align start
+	text-decoration none
+	text-shadow none
+	text-transform none
+	white-space normal
+	word-break normal
+	word-spacing normal
+	word-wrap normal
+
+//-- Heading
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family $headings__font-family
+	font-weight $headings__font-weight
+	line-height $headings__line-height
+	color $headings__color
+	// -webkit-font-smoothing antialiased
+	text-rendering optimizeLegibility 
+
+// h1, .h1,
+// h2, .h2,
+// h3, .h3 {
+//   margin-bottom: $headings-margin-bottom;
+// }
+// h4, .h4,
+// h5, .h5,
+// h6, .h6 {
+//   margin-bottom: $headings-margin-bottom;
+// }
+
+h1, .h1  
+	font-size $font-size__h1
+h2, .h2  
+	font-size $font-size__h2
+h3, .h3  
+	font-size $font-size__h3
+h4, .h4  
+	font-size $font-size__h4
+h5, .h5  
+	font-size $font-size__h5
+h6, .h6  
+	font-size $font-size__h6
+
+// h1:first-child,
+// h2:first-child,
+// h3:first-child,
+// h4:first-child,
+// h5:first-child,
+// h6:first-child
+// 	margin-top 0
+
+// h1:last-child,
+// h2:last-child,
+// h3:last-child,
+// h4:last-child,
+// h5:last-child,
+// h6:last-child
+// 	margin-bottom 0em
+
+h1
+	&.hero_title
+		font-family 'lato'
+		font-size 7em
+		font-weight 100
+
+.block-title
+	font-family 'Montserrat'
+	font-weight 400
+	font-size 0.938em
+	text-transform uppercase
+	letter-spacing 0.03em
+	line-height 2
+
+//-- Text
+p:first-child
+	margin-top 0em
+	
+p:last-child
+	margin-bottom 0
+
+p
+	// margin 0 0 ($line-height__computed / 2)
+	display: block;
+	font-weight 300
+	// letter-spacing 0.01em
+	font-style: normal;
+	white-space: normal;
+	&:after
+	&:before
+		content ""
+		position relative
+		padding 0.25em 0
+		top 0
+
+	&.excerpt
+		max-width 62%
+		margin-left auto
+		margin-right auto
+
+
+//Text Helpers - Alignment
+
+.text-left
+	text-align left
+
+.text-right
+	text-align right
+
+.text-center
+	text-align center
+
+.text-justify
+	text-align justify
+
+.text-nowrap
+	white-space nowrap
+
+// Transformation
+.text-lowercase
+	text-transform lowercase
+
+.text-uppercase
+	text-transform uppercase
+
+.text-capitalize
+	text-transform capitalize
+
+
+// .lead {
+//   font-size: $lead-font-size;
+//   font-weight: $lead-font-weight;
+// }
+
+// // Type display classes
+// .display-1 {
+//   font-size: $display1-size;
+//   font-weight: $display1-weight;
+// }
+// .display-2 {
+//   font-size: $display2-size;
+//   font-weight: $display2-weight;
+// }
+// .display-3 {
+//   font-size: $display3-size;
+//   font-weight: $display3-weight;
+// }
+// .display-4 {
+//   font-size: $display4-size;
+//   font-weight: $display4-weight;
+// }
+
+
+// //
+// // Horizontal rules
+// //
+
+// hr {
+//   margin-top: $spacer-y;
+//   margin-bottom: $spacer-y;
+//   border: 0;
+//   border-top: $hr-border-width solid $hr-border-color;
+// }
+
+
+small,
+.small
+	font-size 80%
+	font-weight normal
+	font-family $font-family__sans
+	text-rendering optimizeLegibility
+	opacity(.6)
+
+// mark,
+// .mark {
+//   padding: .2em;
+//   background-color: $state-warning-bg;
+// }
+
+
+// //
+// // Lists
+// //
+
+// // Unstyled keeps list items block level, just removes default browser padding and list-style
+// .list-unstyled {
+//   padding-left: 0;
+//   list-style: none;
+// }
+
+// // Inline turns list items into inline-block
+// .list-inline {
+//   padding-left: 0;
+//   margin-left: -5px;
+//   list-style: none;
+
+//   > li {
+//     display: inline-block;
+//     padding-right: 5px;
+//     padding-left: 5px;
+//   }
+// }
+
+// // Horizontal description lists w/ grid classes
+// .dl-horizontal {
+//   margin-right: -$grid-gutter-width;
+//   margin-left: -$grid-gutter-width;
+//   @include clearfix;
+// }
+
+
+// //
+// // Misc
+// //
+
+// // Builds on `abbr`
+// .initialism {
+//   font-size: 90%;
+//   text-transform: uppercase;
+// }
+
+// // Blockquotes
+// .blockquote {
+//   padding: ($spacer / 2) $spacer;
+//   margin-bottom: $spacer;
+//   font-size: $blockquote-font-size;
+//   border-left: .25rem solid $blockquote-border-color;
+
+p,
+ul,
+ol
+	&:last-child
+		margin-bottom 0
+
+//   footer {
+//     display: block;
+//     font-size: 80%; // back to default font-size
+//     line-height: $line-height;
+//     color: $blockquote-small-color;
+
+//     &:before {
+//       content: "\2014 \00A0"; // em dash, nbsp
+//     }
+//   }
+// }
+
+// // Opposite alignment of blockquote
+// .blockquote-reverse {
+//   padding-right: $spacer;
+//   padding-left: 0;
+//   text-align: right;
+//   border-right: .25rem solid $blockquote-border-color;
+//   border-left: 0;
+
+//   // Account for citation
+//   footer {
+//     &:before { content: ""; }
+//     &:after {
+//       content: "\00A0 \2014"; // nbsp, em dash
+//     }
+//   }
+// }
+
+// //
+// // Figures
+// //
+
+// .figure {
+//   // Ensures the caption's text aligns with the image.
+//   display: inline-block;
+
+//   > img {
+//     @extend .img-responsive;
+//     line-height: 1;
+//     margin-bottom: ($spacer-y / 2);
+//   }
+// }
+
+// .figure-caption {
+//   font-size: 90%;
+//   color: $gray-light;
+// }

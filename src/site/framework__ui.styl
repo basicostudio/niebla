@@ -1,0 +1,90 @@
+//------------------------------------
+//-- Particular
+//------------------------------------
+
+
+
+
+
+//-- init
+html
+	background-color $color__light
+		
+h1,h2,h3,h4,h5,h6
+	color $color__dark
+section 
+	display block
+	cf()
+	&.site__hero
+		background-color #31DABF
+		background linear-gradient(145deg, rgba(228, 0, 255, 0.39), rgba(79, 140, 251, 0.9), #6DE9AA) // linear-gradient(145deg, $color__info, $color__success)
+		h1
+			color rgba(white,.9)
+		p
+			opacity(1)
+			letter-spacing 1px
+			font-family $font-family__sans
+			-webkit-font-smoothing: auto;
+section 
+	position relative
+	overflow hidden
+	min-height 720px
+	.container__fixed-width
+		position relative 
+		z-index 999
+		align()
+		min-width 720px
+		h1
+			height 200px
+			animation fadeIn .5s ease-in 2s both
+			font-size 14em
+			letter-spacing: 5px;
+			line-height: 180px;
+			-webkit-font-smoothing: antialiased;
+			line-height: 180px;
+			p
+				font-size: 17px;
+				opacity: 1;
+				top: -60px;
+				position: relative;
+#myChart
+	min-width 100%
+
+.header__site
+	absolute top left right 
+	padding 1em
+	.header__nav
+		text-align right
+		line-height 2
+		padding 0 1em
+		li
+			list-style none
+			display inline-block
+			color $color__success
+		.header__status-live
+			size(12px)
+			border-radius 100%
+			border 5px solid $color__success
+			vertical-align middle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
