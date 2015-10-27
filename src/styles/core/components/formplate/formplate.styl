@@ -1,0 +1,225 @@
+/* Formplate
+-----------------------------------------------*/
+
+
+
+
+
+
+.input-group
+.input-group-two
+.input-group-three
+	width 100%
+	cf()
+	input
+		margin-left: -1px;
+		&:first-child
+			margin-left 0px
+			background-clip padding-box
+		&:last-child
+			background-clip padding-box
+			
+	.input-icon
+		input
+			width 100%
+		&:first-child
+			input
+				margin-left 0px
+				background-clip: padding-box
+
+		&:last-child 
+			input
+				background-clip: padding-box
+
+.input-group-two 
+	input
+	.input-icon
+		float left
+		position relative
+		width 50%
+
+.input-group-three 
+	input
+	.input-icon
+		float left
+		position relative
+		width 33.33333%
+
+.input-icon 
+	position relative
+	i
+		position absolute
+		right 12px
+		margin-top 13px
+		font-size 1em
+		z-index 4
+	input
+		padding-right 36px
+
+.formplate 
+	.formplate-checkbox
+	.formplate-radio
+		font-size 16px
+		size(1.375em)
+		display inline-block
+		relative top left
+		line-height 1
+		vertical-align middle
+		border $input__border-width solid $color__input
+		border-radius $border-radius--small
+		background-clip border-box
+	.formplate-checkbox
+	.formplate-radio
+		&:hover
+			cursor pointer
+			border-color $color__success
+		&.checked
+			text-align center
+			color #fff
+			font-family "formplate"
+			border-color $color__success
+			background-color $color__success
+			&:before
+				content "\e600"
+				font-size 12px
+		&>input
+			padding 0px
+			margin 0px
+			display inline-block
+			width 22px
+			height 22px
+			opacity  0
+			&:hover
+				cursor: pointer
+
+	.formplate-radio
+		border-radius $border-radius--big  
+		background-clip padding-box
+		background-clip border-box
+
+.formplate-no-touch
+	label
+		&:hover
+			cursor pointer
+
+
+.formplate-select
+	display inline-block
+	position relative
+	width auto
+	font-family "formplate"
+	border-color $color__input
+	overflow hidden
+	z-index 1
+	trasition-medium()
+	&:before
+		absolute right 0.375em
+		height 100%
+		content "\e601"
+		font-size 1.250em //16/20px
+		vertical-align middle
+		color $color__input
+		z-index 1
+		line-height 2
+		trasition-medium()
+	&:hover
+		border-color $color__input-hover
+		trasition-medium()
+		&:before
+			color $color__input-hover
+			trasition-medium()
+
+	select
+		position relative
+		width 100%
+		height auto
+		margin 0
+		padding 0.875rem
+		padding-right 3.000em
+		border 0
+		font-size 0.750em
+		letter-spacing .03em
+		text-transform uppercase
+		word-spacing normal
+		word-wrap normal
+		outline none
+		user-select text
+		appearance none
+		font-weight 600
+		color $color__gray-medium
+		background-color transparent
+		z-index 2
+		trasition-medium()
+		&::-ms-expand
+			display none
+		&:hover
+			border-color $color__input-hover
+			color $color__input-hover
+			trasition-medium()
+			
+
+.no-cssanimations 
+	.formplate-select
+		&:after
+			display none
+			content: ""
+	select 
+		width 100%
+
+.formplate-toggler
+	size(3.125em,1.875em)
+	position relative
+	display inline-block
+	border-color $color__input
+	border-radius $border-radius--big
+	background-clip padding-box
+	// box-shadow inset 0px 1px 2px rgba(0, 0, 0, 0.15)
+	transition background-color 0.2s ease-out 0s
+	&>input
+		padding 0
+		margin 0
+		opacity 0
+	.handle
+		display block
+		position absolute
+		top 2px
+		left 2px
+		width 23px
+		height 23px
+		background-color $color__input
+		border-radius $border-radius--big
+		// box-shadow 0px 1px 2px rgba(0, 0, 0, 0.1)
+		transition all 0.2s ease-out 0s
+	&.checked
+		border-color $color__success
+		background-color $color__success
+		.handle
+			left 21px
+			background-color white
+			
+.formplate-no-touch 
+	.formplate 
+		.formplate-toggler
+			&:hover
+				cursor pointer
+
+// @-moz-document url-prefix() {
+// 	.formplate .formplate-checkbox, .formplate .formplate-radio {
+// 		line-height: 21px;
+// 		line-height: 1.3125rem
+// 	}
+// }
+
+// @-moz-document url-prefix() {
+// 	.formplate-select select {
+// 		padding-top: 10px;
+// 		padding-bottom: 8px
+// 	}
+// }
+
+// @media only screen and (min-width:43.813em) {
+// 	textarea {
+// 		font-size: 0.875em;
+// 		padding: 12px
+// 	}
+// }

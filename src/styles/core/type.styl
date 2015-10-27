@@ -6,12 +6,20 @@
 
 
 
+// 0.125em - 2px
+// 0.250em - 4px
+// 0.375em - 6px
+// 0.500em - 8px
+// 0.625em - 10px
+// 0.750em - 12px
+// 0.875em - 14px
+// 1.000em - 16px
+
 //-- Text reset
 body
 	font-family $font-family__base
-	// We deliberately do NOT reset font-size.
 	font-style normal
-	font-weight normal
+	font-weight 500
 	letter-spacing normal
 	line-break auto
 	line-height $line-height
@@ -87,7 +95,8 @@ h1
 	font-size 0.938em
 	text-transform uppercase
 	letter-spacing 0.03em
-	line-height 2
+	line-height @font-size
+	margin-bottom (0.938/2)em
 
 //-- Text
 p:first-child
@@ -97,12 +106,10 @@ p:last-child
 	margin-bottom 0
 
 p
-	// margin 0 0 ($line-height__computed / 2)
-	display: block;
-	font-weight 300
-	// letter-spacing 0.01em
-	font-style: normal;
-	white-space: normal;
+	display block
+	// font-weight 300
+	font-style normal
+	white-space normal
 	&:after
 	&:before
 		content ""
@@ -184,9 +191,17 @@ small,
 .small
 	font-size 80%
 	font-weight normal
-	font-family $font-family__sans
 	text-rendering optimizeLegibility
 	opacity(.6)
+
+label
+.label
+	display inline-block
+	text-transform uppercase
+	font-size 0.750em
+	font-weight 500
+	color $color__gray-medium
+	cf()
 
 // mark,
 // .mark {

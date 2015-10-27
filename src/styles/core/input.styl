@@ -14,11 +14,39 @@ A couple of things to watch out for:
 - By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
 
 ----------------------------------------------------------------------------------------------------*/
+// 0.125em - 2px
+// 0.250em - 4px
+// 0.375em - 6px
+// 0.500em - 8px
+// 0.625em - 10px
+// 0.750em - 12px
+// 0.875em - 14px
+// 1.000em - 16px
+// 1.125em - 18px
+// 1.250em - 20px
 
-input,
-label,
-select,
-button,
+trasition-medium()
+	transition all .25s ease
+
+// select2body
+
+//-- Placeholder
+//-----------------------------------------------
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+
+//-- init
+//-----------------------------------------------
+input
+select
+button
 textarea
 	margin 0
 	border 0
@@ -28,22 +56,58 @@ textarea
 	white-space normal
 	background none
 	line-height 1
-	/* Browsers have different default form fonts */
-	font-size 13px
-	font-family $font-family__sans
+	font-size 0.875em
+	placeholder()
+		color $color__input
 
-/* Remove the stupid outer glow in Webkit */
-input:focus
-	outline 0
-
-
-/* Box Sizing Reset
------------------------------------------------*/
-/* All of our custom controls should be what we expect them to be */
-input,
+input
 textarea
-	box-sizing content-box
+	box-sizing border-box
+	padding 0.625em
+	font-size 0.875em
+	line-height 1.5
+	font-weight normal
 
+input
+	width 100%
+	background-color transparent
+	border-color $color__input
+	z-index 1
+	outline none
+	appearance none
+	&:focus
+		outline 0
+		border-color $color__input-focus
+		z-index 2	
+
+textarea 
+	vertical-align top
+	overflow auto
+	width 100%
+	border-color $color__input
+	outline none
+	appearance none
+	background-clip padding-box
+	&:focus
+		border-color $color__input-focus
+
+
+input
+input[type='radio']
+select
+textarea
+.formplate-select
+.formplate-toggler
+	border 2px solid $color__input
+	border-radius $border-radius--small
+
+input
+	&[value='Error']
+		border-color $color__danger
+	&[value='Success']
+		border-color $color__success
+	&[disabled='disabled']
+		border-color $color__gray-light
 
 /* These elements are usually rendered a certain way by the browser */
 button,
@@ -76,8 +140,7 @@ select
 -----------------------------------------------*/
 input[type=checkbox],
 input[type=radio]
-	width:13px;
-	height:13px;
+	size(1.375em)
 
 
 /* File Uploads
@@ -118,21 +181,20 @@ input[type="submit"]
 	border 0
 	background none
 
-
-/* Textarea
------------------------------------------------*/
-textarea 
-	vertical-align top
-	/* Turn off scroll bars in IE unless needed */
-	overflow auto
-
 /* Selects
 -----------------------------------------------*/
 // select
 select[multiple] 
 	/* Move the label to the top */
-	vertical-align top
-	
+	vertical-align middle
+
+
+
+
+
+
+
+
 
 
 

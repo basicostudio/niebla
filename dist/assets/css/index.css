@@ -2346,10 +2346,80 @@ output {
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,300,100");
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
+@font-face {
+  font-family: 'formplate';
+  src: url("../fonts/icon-font-formplate/icomoon.eot?c4hmew");
+  src: url("../fonts/icon-font-formplate/icomoon.eot?#iefixc4hmew") format("embedded-opentype"), url("../fonts/icon-font-formplate/icomoon.woff?c4hmew") format("woff"), url("../fonts/icon-font-formplate/icomoon.ttf?c4hmew") format("truetype"), url("../fonts/icon-font-formplate/icomoon.svg?c4hmew#icomoon") format("svg");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-RegularIt.eot");
+  src: url("../fonts/proximanova/ProximaNova-RegularIt.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-RegularIt.woff") format('woff'), url("../fonts/proximanova/ProximaNova-RegularIt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-LightIt.eot");
+  src: url("../fonts/proximanova/ProximaNova-LightIt.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-LightIt.woff") format('woff'), url("../fonts/proximanova/ProximaNova-LightIt.ttf") format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-Light.eot");
+  src: url("../fonts/proximanova/ProximaNova-Light.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-Light.woff") format('woff'), url("../fonts/proximanova/ProximaNova-Light.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-Black.eot");
+  src: url("../fonts/proximanova/ProximaNova-Black.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-Black.woff") format('woff'), url("../fonts/proximanova/ProximaNova-Black.ttf") format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-Extrabld.eot");
+  src: url("../fonts/proximanova/ProximaNova-Extrabld.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-Extrabld.woff") format('woff'), url("../fonts/proximanova/ProximaNova-Extrabld.ttf") format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-SemiboldIt.eot");
+  src: url("../fonts/proximanova/ProximaNova-SemiboldIt.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-SemiboldIt.woff") format('woff'), url("../fonts/proximanova/ProximaNova-SemiboldIt.ttf") format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-Semibold.eot");
+  src: url("../fonts/proximanova/ProximaNova-Semibold.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-Semibold.woff") format('woff'), url("../fonts/proximanova/ProximaNova-Semibold.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-Regular.eot");
+  src: url("../fonts/proximanova/ProximaNova-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-Regular.woff") format('woff'), url("../fonts/proximanova/ProximaNova-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova/ProximaNova-Thin.eot");
+  src: url("../fonts/proximanova/ProximaNova-Thin.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanova/ProximaNova-Thin.woff") format('woff'), url("../fonts/proximanova/ProximaNova-Thin.ttf") format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
   letter-spacing: normal;
   line-break: auto;
   line-height: 1.631578947368421;
@@ -2375,7 +2445,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2em;
   color: inherit;
@@ -2416,7 +2486,8 @@ h1.hero_title {
   font-size: 0.938em;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  line-height: 2;
+  line-height: 0.938em;
+  margin-bottom: 0.469em;
 }
 p:first-child {
   margin-top: 0em;
@@ -2426,7 +2497,6 @@ p:last-child {
 }
 p {
   display: block;
-  font-weight: 300;
   font-style: normal;
   white-space: normal;
 }
@@ -2470,11 +2540,30 @@ small,
 .small {
   font-size: 80%;
   font-weight: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   opacity: 0.6;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   filter: alpha(opacity=60);
+}
+label,
+.label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #808080;
+  *zoom: 1;
+}
+label:before,
+.label:before,
+label:after,
+.label:after {
+  content: '';
+  display: table;
+}
+label:after,
+.label:after {
+  clear: both;
 }
 p:last-child,
 ul:last-child,
@@ -4043,7 +4132,6 @@ input[type="button"].btn-block {
   background-color: #fafafa;
 }
 input,
-label,
 select,
 button,
 textarea {
@@ -4055,18 +4143,67 @@ textarea {
   white-space: normal;
   background: none;
   line-height: 1;
-/* Browsers have different default form fonts */
-  font-size: 13px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-input:focus {
-  outline: 0;
+  font-size: 0.875em;
 }
 input,
 textarea {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.625em;
+  font-size: 0.875em;
+  line-height: 1.5;
+  font-weight: normal;
+}
+input {
+  width: 100%;
+  background-color: transparent;
+  border-color: #ccc;
+  z-index: 1;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:focus {
+  outline: 0;
+  border-color: #37cdff;
+  z-index: 2;
+}
+textarea {
+  vertical-align: top;
+  overflow: auto;
+  width: 100%;
+  border-color: #ccc;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+textarea:focus {
+  border-color: #37cdff;
+}
+input,
+input[type='radio'],
+select,
+textarea,
+.formplate-select,
+.formplate-toggler {
+  border: 2px solid #ccc;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+input[value='Error'] {
+  border-color: #fb847f;
+}
+input[value='Success'] {
+  border-color: #6ee9ab;
+}
+input[disabled='disabled'] {
+  border-color: #b3b3b3;
 }
 button,
 input[type=reset],
@@ -4081,8 +4218,8 @@ select {
 }
 input[type=checkbox],
 input[type=radio] {
-  width: 13px;
-  height: 13px;
+  width: 1.375em;
+  height: 1.375em;
 }
 input[type=search] {
   -webkit-appearance: textfield;
@@ -4108,14 +4245,305 @@ input[type="submit"] {
   border: 0;
   background: none;
 }
-textarea {
-  vertical-align: top;
-/* Turn off scroll bars in IE unless needed */
-  overflow: auto;
-}
 select[multiple] {
 /* Move the label to the top */
-  vertical-align: top;
+  vertical-align: middle;
+}
+.input-group,
+.input-group-two,
+.input-group-three {
+  width: 100%;
+  *zoom: 1;
+}
+.input-group:before,
+.input-group-two:before,
+.input-group-three:before,
+.input-group:after,
+.input-group-two:after,
+.input-group-three:after {
+  content: '';
+  display: table;
+}
+.input-group:after,
+.input-group-two:after,
+.input-group-three:after {
+  clear: both;
+}
+.input-group input,
+.input-group-two input,
+.input-group-three input {
+  margin-left: -1px;
+}
+.input-group input:first-child,
+.input-group-two input:first-child,
+.input-group-three input:first-child {
+  margin-left: 0px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.input-group input:last-child,
+.input-group-two input:last-child,
+.input-group-three input:last-child {
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.input-group .input-icon input,
+.input-group-two .input-icon input,
+.input-group-three .input-icon input {
+  width: 100%;
+}
+.input-group .input-icon:first-child input,
+.input-group-two .input-icon:first-child input,
+.input-group-three .input-icon:first-child input {
+  margin-left: 0px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.input-group .input-icon:last-child input,
+.input-group-two .input-icon:last-child input,
+.input-group-three .input-icon:last-child input {
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.input-group-two input,
+.input-group-two .input-icon {
+  float: left;
+  position: relative;
+  width: 50%;
+}
+.input-group-three input,
+.input-group-three .input-icon {
+  float: left;
+  position: relative;
+  width: 33.33333%;
+}
+.input-icon {
+  position: relative;
+}
+.input-icon i {
+  position: absolute;
+  right: 12px;
+  margin-top: 13px;
+  font-size: 1em;
+  z-index: 4;
+}
+.input-icon input {
+  padding-right: 36px;
+}
+.formplate .formplate-checkbox,
+.formplate .formplate-radio {
+  font-size: 16px;
+  width: 1.375em;
+  height: 1.375em;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  line-height: 1;
+  vertical-align: middle;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border-box;
+}
+.formplate .formplate-checkbox:hover,
+.formplate .formplate-radio:hover {
+  cursor: pointer;
+  border-color: #6ee9ab;
+}
+.formplate .formplate-checkbox.checked,
+.formplate .formplate-radio.checked {
+  text-align: center;
+  color: #fff;
+  font-family: "formplate";
+  border-color: #6ee9ab;
+  background-color: #6ee9ab;
+}
+.formplate .formplate-checkbox.checked:before,
+.formplate .formplate-radio.checked:before {
+  content: "\e600";
+  font-size: 12px;
+}
+.formplate .formplate-checkbox>input,
+.formplate .formplate-radio>input {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.formplate .formplate-checkbox>input:hover,
+.formplate .formplate-radio>input:hover {
+  cursor: pointer;
+}
+.formplate .formplate-radio {
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border-box;
+}
+.formplate-no-touch label:hover {
+  cursor: pointer;
+}
+.formplate-select {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  font-family: "formplate";
+  border-color: #ccc;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.formplate-select:before {
+  position: absolute;
+  right: 0.375em;
+  height: 100%;
+  content: "\e601";
+  font-size: 1.25em;
+  vertical-align: middle;
+  color: #ccc;
+  z-index: 1;
+  line-height: 2;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.formplate-select:hover {
+  border-color: #37cdff;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.formplate-select:hover:before {
+  color: #37cdff;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.formplate-select select {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0.875rem;
+  padding-right: 3em;
+  border: 0;
+  font-size: 0.75em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  word-spacing: normal;
+  word-wrap: normal;
+  outline: none;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 600;
+  color: #808080;
+  background-color: transparent;
+  z-index: 2;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.formplate-select select::-ms-expand {
+  display: none;
+}
+.formplate-select select:hover {
+  border-color: #37cdff;
+  color: #37cdff;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.no-cssanimations .formplate-select:after {
+  display: none;
+  content: "";
+}
+.no-cssanimations select {
+  width: 100%;
+}
+.formplate-toggler {
+  width: 3.125em;
+  height: 1.875em;
+  position: relative;
+  display: inline-block;
+  border-color: #ccc;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-transition: background-color 0.2s ease-out 0s;
+  -moz-transition: background-color 0.2s ease-out 0s;
+  -o-transition: background-color 0.2s ease-out 0s;
+  -ms-transition: background-color 0.2s ease-out 0s;
+  transition: background-color 0.2s ease-out 0s;
+}
+.formplate-toggler>input {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.formplate-toggler .handle {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 23px;
+  height: 23px;
+  background-color: #ccc;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.formplate-toggler.checked {
+  border-color: #6ee9ab;
+  background-color: #6ee9ab;
+}
+.formplate-toggler.checked .handle {
+  left: 21px;
+  background-color: #fff;
+}
+.formplate-no-touch .formplate .formplate-toggler:hover {
+  cursor: pointer;
 }
 .site__hero {
   width: 100%;
@@ -4162,31 +4590,12 @@ section.site__hero p {
   -ms-filter: none;
   filter: none;
   letter-spacing: 1px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: auto;
 }
 section {
   position: relative;
   overflow: hidden;
-  min-height: 720px;
-}
-section .container__fixed-width {
-  position: relative;
-  z-index: 999;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  min-width: 720px;
 }
 section .container__fixed-width h1 {
   height: 200px;

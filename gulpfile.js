@@ -37,7 +37,11 @@ var
 
 // JS
 gulp.task('scripts', function() {
-	return gulp.src(['./src/scripts/main.js'])
+	return gulp.src([
+		'./src/styles/core/components/formplate/formplate.js',
+
+		'./src/scripts/main.js'
+		])
 		.pipe(concat('./dist/assets/js/script.js'))
 		.pipe(rename('main.min.js'))
 		// .pipe(uglify())

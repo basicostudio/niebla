@@ -6,41 +6,54 @@
 
 
 
+// 0.125em - 2px
+// 0.250em - 4px
+// 0.375em - 6px
+// 0.500em - 8px
+// 0.625em - 10px
+// 0.750em - 12px
+// 0.875em - 14px
+// 1.000em - 16px
+// 1.125em - 18px
+// 1.250em - 20px
 // Colors
 //------------------------------------
-$color__black                        ?= hsla(black,1)
-$color__white                        ?= hsla(white,1)
+$color__black                         ?= hsla(black,1)
+$color__white                         ?= hsla(white,1)
 
-$color__dark                         ?= hsla(#193740,1)
-$color__light                        ?= darken(hsla(#FDFBF5,1),2.5%)
+$color__dark                          ?= hsla(#193740,1)
+$color__light                         ?= darken(hsla(#FDFBF5,1),2.5%)
 
-$color__gray-dark                    ?= lighten($color__black, 20%)
-$color__gray-medium                  ?= lighten($color__black, 50%)
-$color__gray-light                   ?= lighten($color__black, 70%)
-$color__gray-lighter                 ?= lighten($color__black, 80%)
-$color__gray-lightest                ?= lighten($color__black, 98%)
+$color__gray-dark                     ?= lighten($color__black, 20%)
+$color__gray-medium                   ?= lighten($color__black, 50%)
+$color__gray-light                    ?= lighten($color__black, 70%)
+$color__gray-lighter                  ?= lighten($color__black, 80%)
+$color__gray-lightest                 ?= lighten($color__black, 98%)
 
-$color__primary                      ?= hsla(#78f3ff,1) // #0275d8
-$color__default                      ?= darken(hsla(#FDFBF5,1),2.5%)
-$color__success                      ?= hsla(#6EE9AB,1) // #10cfbd //#57cc78
-$color__info                         ?= hsla(#37CDFF,1) // #5bc0de
-$color__warning                      ?= hsla(#fff558,1) // #FFF245 // #f0ad4e
-$color__danger                       ?= hsla(#fb847f,1) // #FF6461 // #f55753 // #ff4b46
+$color__primary                       ?= hsla(#78f3ff,1) // #0275d8
+$color__default                       ?= darken(hsla(#FDFBF5,1),2.5%)
+$color__success                       ?= hsla(#6EE9AB,1) // #10cfbd //#57cc78
+$color__info                          ?= hsla(#37CDFF,1) // #5bc0de
+$color__warning                       ?= hsla(#fff558,1) // #FFF245 // #f0ad4e
+$color__danger                        ?= hsla(#fb847f,1) // #FF6461 // #f55753 // #ff4b46
 
-$color__link                      ?= hsla(#0275d8)
-$color__link--over                ?= lighten($color__link,30%)
-$color__link--over                ?= hsla($color__link,.6)
+$color__link                          ?= hsla(#0275d8)
+$color__link--over                    ?= lighten($color__link,30%)
+$color__link--over                    ?= hsla($color__link,.6)
 
 
 //-- buttons
-$color__button                       ?= $color__gray-lightest
+$color__button                        ?= $color__gray-lightest
+$color__warning-hover                 ?= hsla(#FFAB3C,1)
 
-$color__warning-hover                ?= hsla(#FFAB3C,1)
 
-
+$color__input                         ?= $color__gray-lighter
+$color__input-focus                   ?= $color__info
+$color__input-hover                   ?= $color__info
+$color__input-disabled                ?= $color__gray-lighter
 //-- Grid size
 //------------------------------------
-$ratio                                ?= (31/19) //1,6315789474
+$ratio                                ?= (62/38) //1,6315789474
 $font-size__body                      ?= $ratio*10px
 
 $min-unit                             ?= 1em
@@ -75,7 +88,7 @@ $breakpoint__mobile                 ?= 34em
 
 //-- Typography
 //------------------------------------
-$font-family__sans                  ?= 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-family__sans                  ?= 'Proxima Nova','Helvetica Neue', Helvetica, Arial, sans-serif
 $font-family__serif                 ?= Georgia, "Times New Roman", Times, serif
 $font-family__monospace             ?= Menlo, Monaco, Consolas, "Courier New", monospace
 $font-family__base                  ?= $font-family__sans
@@ -99,6 +112,9 @@ $headings__font-weight              ?= 300
 $headings__line-height              ?= 1.2em
 $headings__color                    ?= inherit
 
+//-- Inputs
+//------------------------------------
+$input__border-width                ?= 2px
 
 //-- Border Radius
 //------------------------------------

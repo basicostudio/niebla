@@ -3,10 +3,9 @@ html.no-js
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		title Clean
+		title Niebla by @basicostudio
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='stylesheet', href='assets/css/index.css')
 
 		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Montserrat:400,700')
 		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic')
@@ -15,14 +14,63 @@ html.no-js
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	
+		link(rel='stylesheet', href='assets/css/index.css')
+		script(src='assets/js/jquery-1.11.3.js')
+		script(src='assets/js/main.min.js')
 	body
 		main.framework__ui
 			section.site__hero
 				.container__fixed-width
 					.row.text-center
 						h1.hero_title 
-							| Pulse
+							| Niebla
 							p.excerpt Real-Time Sentiment Analysis, made by Socialab
+
+			section.p-t-b.p-b-s
+				.container__fixed-width
+					.row
+						.col-desktop-03
+							.row.m-b-s
+								input.form-control(type='text', value='', placeholder='Inactive')
+							.row.m-b-s
+								input.form-control(type='text', value='Error', placeholder='Error')
+							.row.m-b-s
+								input.form-control(type='text', value='Success', placeholder='Success')
+							.row.m-b-s
+								input.form-control(type='text', value='Disabled', disabled='disabled')
+
+						.col-desktop-03
+							.formplate
+								input#text-input(type='text', name='text-input', placeholder='Input')
+							.formplate
+								textarea(placeholder='Textarea')
+							.formplate
+								input#checkbox-1(type='checkbox', name='checkbox-1', value='checkbox-1')
+								label(for='checkbox-1') Checkbox 1
+							.formplate
+								input#checkbox-2(type='checkbox', name='checkbox-2', value='checkbox-2')
+								label(for='checkbox-2') Checkbox 2
+							.formplate
+								input#checkbox-3(type='checkbox', name='checkbox-3', value='checkbox-3')
+								label(for='checkbox-3') Checkbox 3
+							.formplate
+								input#radio-1(type='radio', name='radio', value='radio-1')
+								label(for='radio-1') Radio 1
+							.formplate
+								input#radio-2(type='radio', name='radio', value='radio-2')
+								label(for='radio-2') Radio 2
+							.formplate
+								input#radio-3(type='radio', name='radio', value='radio-3')
+								label(for='radio-3') Radio 3
+	
+						.col-desktop-03
+							.formplate
+								select
+									option(value='1') Select Option 1
+									option(value='2') Select Option 2
+									option(value='3') Select Option 3
+							.formplate
+								input.toggler(type='checkbox', name='toggler', value='toggler')
 
 			section.p-t-b.p-b-m
 				.container__fixed-width
@@ -67,22 +115,6 @@ html.no-js
 							a(href="#").btn.border.big.light light
 						.col-desktop-06
 							a(href="#").btn.big.border.white success
-
-			section.p-t-b.p-b-m
-				.container__fixed-width
-					h6.block-title basics elements
-					h2.m-b-s input first snack
-					.row.m-b-s
-						.col-desktop-04
-							input.form-control(type='text', value='', placeholder='Inactive')
-						.col-desktop-04
-							input.form-control(type='text', value='Error')
-						.col-desktop-04
-							input.form-control(type='text', value='Success')
-						.col-desktop-04
-							input.form-control(type='text', value='Disabled', disabled='disabled')
-
-
 
 					//- .row.text-center.container__small.m-b-b
 					//-   h6.block-title Paint it the way you Like it
@@ -147,8 +179,11 @@ html.no-js
 								h6.block-title Lorem ipsum
 								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at perspiciatis itaque architecto hic alias eos ducimus dignissimos nisi distinctio, deleniti reprehenderit beatae laudantium culpa! Fugiat aut in illo maiores.
 						.col-desktop-02
-
-		script(src='assets/js/main.min.js')
+			section.p-b-m.p-t-m
+				.container__small
+					.row.text-center
+						h2.m-b-s Copyright & License Stuff
+						p You can do whatever you want to with Webplate or its plugins, just mention it in your readme. Everything falls under the Apache License 2.0 which you can read through if you really want to.
 
 
 

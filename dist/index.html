@@ -3,15 +3,17 @@
  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Clean</title>
+  <title>Niebla by @basicostudio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:900italic,900,700italic,700,500italic,500,400italic,400,300italic,300,100italic">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic"><link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <script src="assets/js/jquery-1.11.3.js"></script>
+  <script src="assets/js/main.min.js"></script>
  </head>
  <body>
   <main class="framework__ui">
@@ -20,9 +22,73 @@
      <div class="row text-center">
       <h1 class="hero_title">
         
-       Pulse
+       Niebla
        <p class="excerpt">Real-Time Sentiment Analysis, made by Socialab</p>
       </h1>
+     </div>
+    </div>
+   </section>
+   <section class="p-t-b p-b-s">
+    <div class="container__fixed-width">
+     <div class="row">
+      <div class="col-desktop-03">
+       <div class="row m-b-s">
+        <input type="text" value="" placeholder="Inactive" class="form-control">
+       </div>
+       <div class="row m-b-s">
+        <input type="text" value="Error" placeholder="Error" class="form-control">
+       </div>
+       <div class="row m-b-s">
+        <input type="text" value="Success" placeholder="Success" class="form-control">
+       </div>
+       <div class="row m-b-s">
+        <input type="text" value="Disabled" disabled="disabled" class="form-control">
+       </div>
+      </div>
+      <div class="col-desktop-03">
+       <div class="formplate">
+        <input id="text-input" type="text" name="text-input" placeholder="Input">
+       </div>
+       <div class="formplate">
+        <textarea placeholder="Textarea"></textarea>
+       </div>
+       <div class="formplate">
+        <input id="checkbox-1" type="checkbox" name="checkbox-1" value="checkbox-1">
+        <label for="checkbox-1">Checkbox 1</label>
+       </div>
+       <div class="formplate">
+        <input id="checkbox-2" type="checkbox" name="checkbox-2" value="checkbox-2">
+        <label for="checkbox-2">Checkbox 2</label>
+       </div>
+       <div class="formplate">
+        <input id="checkbox-3" type="checkbox" name="checkbox-3" value="checkbox-3">
+        <label for="checkbox-3">Checkbox 3</label>
+       </div>
+       <div class="formplate">
+        <input id="radio-1" type="radio" name="radio" value="radio-1">
+        <label for="radio-1">Radio 1</label>
+       </div>
+       <div class="formplate">
+        <input id="radio-2" type="radio" name="radio" value="radio-2">
+        <label for="radio-2">Radio 2</label>
+       </div>
+       <div class="formplate">
+        <input id="radio-3" type="radio" name="radio" value="radio-3">
+        <label for="radio-3">Radio 3</label>
+       </div>
+      </div>
+      <div class="col-desktop-03">
+       <div class="formplate">
+        <select>
+         <option value="1">Select Option 1</option>
+         <option value="2">Select Option 2</option>
+         <option value="3">Select Option 3</option>
+        </select>
+       </div>
+       <div class="formplate">
+        <input type="checkbox" name="toggler" value="toggler" class="toggler">
+       </div>
+      </div>
      </div>
     </div>
    </section>
@@ -54,26 +120,6 @@
       <div class="col-desktop-06"><a href="#" class="btn border big light">light</a></div>
       <div class="col-desktop-06"><a href="#" class="btn big border white">success</a></div>
      </div>
-    </div>
-   </section>
-   <section class="p-t-b p-b-m">
-    <div class="container__fixed-width">
-     <h6 class="block-title">basics elements</h6>
-     <h2 class="m-b-s">input first snack</h2>
-     <div class="row m-b-s">
-      <div class="col-desktop-04">
-       <input type="text" value="" placeholder="Inactive" class="form-control">
-      </div>
-      <div class="col-desktop-04">
-       <input type="text" value="Error" class="form-control">
-      </div>
-      <div class="col-desktop-04">
-       <input type="text" value="Success" class="form-control">
-      </div>
-      <div class="col-desktop-04">
-       <input type="text" value="Disabled" disabled="disabled" class="form-control">
-      </div>
-     </div>
      
     </div>
    </section>
@@ -104,7 +150,14 @@
      </div>
     </div>
    </section>
+   <section class="p-b-m p-t-m">
+    <div class="container__small">
+     <div class="row text-center">
+      <h2 class="m-b-s">Copyright & License Stuff</h2>
+      <p>You can do whatever you want to with Webplate or its plugins, just mention it in your readme. Everything falls under the Apache License 2.0 which you can read through if you really want to.</p>
+     </div>
+    </div>
+   </section>
   </main>
-  <script src="assets/js/main.min.js"></script>
  </body>
 </html>
